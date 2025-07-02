@@ -16,9 +16,15 @@ const Chips = () => {
     return(
         <div className={!bConState ? "chips-container" : "chips-container disabled-container"}>
             {
-                chips.map(elm=>{
+                chips.map( elm => {
                     return(
-                        <div key={elm.id} className={`chip-${elm.number} ${chip === elm.number ? "activeChip" : null}`} onClick={()=>selectChip(elm.number)}>{elm.number}</div>
+                        <div 
+                            key={elm.id} 
+                            className={`chip-${elm.number} ${chip === elm.number ? "activeChip" : null}`} 
+                            onClick={()=>selectChip(elm.number)}
+                        >
+                            {elm.number}
+                        </div>
                     )
                 })
             }
